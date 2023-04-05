@@ -5,13 +5,16 @@ pipeline {
     stages {
 
         stage('Build') {
-            agent {
+            steps {
                 sh 'HOLA MUNDO JENKINS'
+                sh 'docker ps'
+                sh 'ls -lta'
+            }          
+        }
+        stage('docker containers') {
+            steps {
+                sh 'docker ps'
             }
-            
-            steps {                
-                sh 'FINALIZANDO JENKINS'
-            }            
         }
     }
 }
