@@ -6,7 +6,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'HOLA MUNDO JENKINS'
+                sh 'echo HOLA MUNDO JENKINS'
                 sh 'docker ps'
                 sh 'ls -lta'
             }          
