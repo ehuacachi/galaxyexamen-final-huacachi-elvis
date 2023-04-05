@@ -16,5 +16,10 @@ pipeline {
                 sh 'docker ps'
             }
         }
+        stage('git') {
+            steps {
+                git branch: 'main', credentialsId: 'token_github', url: 'https://github.com/ehuacachi/galaxyexamen-final-huacachi-elvis.git'
+            }
+        }
     }
 }
